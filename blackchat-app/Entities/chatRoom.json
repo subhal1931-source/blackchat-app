@@ -1,0 +1,28 @@
+{
+  "name": "ChatRoom",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the chat room"
+    },
+    "description": {
+      "type": "string",
+      "description": "A short description of the room"
+    },
+    "creatorName": {
+      "type": "string",
+      "description": "Name of the user who created the room"
+    }
+  },
+  "required": [
+    "name",
+    "creatorName"
+  ],
+  "x-accessControl": {
+    "permissions": {
+      "read": "anonymous",
+      "write": "anonymous"
+    }
+  }
+}

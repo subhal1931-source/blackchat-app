@@ -1,0 +1,48 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "roomId": {
+      "type": "string",
+      "description": "Identifier for the chat room this message belongs to"
+    },
+    "content": {
+      "type": "string",
+      "description": "Text content of the message"
+    },
+    "senderName": {
+      "type": "string",
+      "description": "Display name of the sender"
+    },
+    "senderId": {
+      "type": "string",
+      "description": "Unique identifier for the sender's session"
+    },
+    "attachmentUrl": {
+      "type": "string",
+      "description": "URL of any attached file (image, video, voice note)"
+    },
+    "attachmentType": {
+      "type": "string",
+      "enum": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "description": "Type of the message or attachment"
+    }
+  },
+  "required": [
+    "roomId",
+    "senderId",
+    "senderName",
+    "attachmentType"
+  ],
+  "x-accessControl": {
+    "permissions": {
+      "read": "anonymous",
+      "write": "anonymous"
+    }
+  }
+}
